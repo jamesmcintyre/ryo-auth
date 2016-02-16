@@ -4,11 +4,25 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var dotenv = require('dotenv');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+
+//SETUP MONGOOSE DB CONNECTION
+var mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/hashnsalts';
+mongoose.connect(mongoUrl, function(err) {
+  if(err) {
+    console.log('Mongo error:', err);
+  } else {
+    console.log(`MongoDB connected to ${mongoUrl}`);
+  }
+});
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

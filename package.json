@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "setup": "rm -rf public node_modules && npm i && bower i && gulp build",
+    "postinstall": "bower i && gulp build"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.5.0",
@@ -14,7 +16,6 @@
     "debug": "~2.2.0",
     "dotenv": "^2.0.0",
     "ejs": "~2.3.3",
-    "env": "0.0.2",
     "express": "~4.13.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
