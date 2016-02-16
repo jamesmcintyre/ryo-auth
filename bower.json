@@ -1,0 +1,24 @@
+{
+  "name": "hash-n-salts",
+  "description": "",
+  "main": "",
+  "authors": [
+    "James McIntyre <james.checks.his.email@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  "angular": "^1.5.0",
+  "angular-ui-router": "^0.2.18",
+  "angular-cookies": "~1.5.0"
+}
+}
